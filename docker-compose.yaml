@@ -1,0 +1,31 @@
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    image: myapp/nginx
+    container_name: php1c-nginx
+    # проброс портов
+    ports:
+      - "80:80"
+    volumes:
+       - ./public:/data/php1c.local/public
+       - ./vendor:/data/php1c.local/vendor
+       - ./src:/data/php1c.local/src
+    networks:
+      - app-network
+
+  app:
+    image: php:8.2-fpm
+    container_name: php1c-app
+    volumes: 
+       - ./public:/data/php1c.local/public
+       - ./vendor:/data/php1c.local/vendor
+       - ./src:/data/php1c.local/src
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge

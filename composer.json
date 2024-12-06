@@ -1,0 +1,18 @@
+{
+    "name": "sikuda/php1c-site",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sikuda\\Php1c\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sikuda",
+            "email": "sikuda@yandex.ru"
+        }
+    ],
+    "require": {
+        "sikuda/php1c": "^0.3.0"
+    }
+}

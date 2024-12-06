@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6674c71e203ef75384d7221ef26e7f1f",
+    "packages": [
+        {
+            "name": "sikuda/php1c",
+            "version": "0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sikuda/php1c-lib.git",
+                "reference": "5bc4f44994af513a5e10018c0cbac46cf29a01a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sikuda/php1c-lib/zipball/5bc4f44994af513a5e10018c0cbac46cf29a01a0",
+                "reference": "5bc4f44994af513a5e10018c0cbac46cf29a01a0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-mbstring": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sikuda\\Php1c\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Kudashkin",
+                    "email": "sikuda@yandex.ru"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/sikuda/php1c-lib/issues",
+                "source": "https://github.com/sikuda/php1c-lib/tree/0.3"
+            },
+            "time": "2024-12-06T07:17:43+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
