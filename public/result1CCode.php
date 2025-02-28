@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace Sikuda\Php1c;
+require_once __DIR__."/../vendor/autoload.php";
 /**
 * Скрипт для обмена выполняемого кода по 1С (обработка UnitTests.epf)
 *
@@ -19,15 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	//echo $str;
 	//die();
 
-	$php1C = new Sikuda\Php1c\Php1C();
+	$php1C = new php1C();
 
-	if(isset($_GET["code"])) $str = $php1C->evalCode($code);
+	if(isset($_GET["code"])) $str = $php1C->makeCode($code);
 	else{	
 		if ($Language1C === 'en') {
 			$str = $php1C->evalCode($code, "Result");    
 		}
 		else{
-			$str = php1C->evalCode($code, "Результат"); 
+			$str = $php1C->evalCode($code, "Результат"); 
 		} 
 	}
 }	
